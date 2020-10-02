@@ -921,11 +921,40 @@ section {
         }
     }
     nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        @include flex(flex, row, space-around, center);
+        height: 7vh;
+        background: #2289FF;
+        &.active {
+            .nav-links {
+                transform: translateX(0px); 
+            }
+        }
         .logo {
+            z-index: 999;
             letter-spacing: 2px;
         }
         .nav-links {
-            width: 60%;
+            z-index: 2;
+            position: absolute;
+            @include flex(flex, column, space-around, center);
+            width: 50%;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            height: 100vh;
+            background: #2289FF;
+            right: 0;
+            transform: translateX(100%);
+            transition: .5s;
+        }
+        .burger {
+            z-index: 9;
+            display: block;
+            cursor: pointer;
         }
     }
 }
