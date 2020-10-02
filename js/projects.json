@@ -9,18 +9,18 @@
         "name": "Cool Website!",
         "desc": "NICE EEEsimple website!",
         "author": "Doe John",
-        "image": "testtt.jpg"
+        "image": "https://res.cloudinary.com/madinah/image/upload/v1601630793/project%20images/tesT_j8jom2.jpg"
     },
     {
         "name": "Website Cool!",
         "desc": "NICE sIMple website!",
         "author": "Doe John!",
-        "image": "testtt.jpg"
+        "image": "https://res.cloudinary.com/madinah/image/upload/v1601630793/project%20images/tesT_j8jom2.jpg"
     },
     {
         "name": "ssste Cool!",
         "desc": "NICEsse website!",
         "author": "Doesn!",
-        "image": "testtt.jpg"
+        "image": "https://res.cloudinary.com/madinah/image/upload/v1601630794/project%20images/testtt_dhp6lr.jpg"
     }
 ]
