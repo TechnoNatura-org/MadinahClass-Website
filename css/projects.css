@@ -249,7 +249,7 @@ main.content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 9999;
+  z-index: 999;
   width: 320px;
   height: 435px;
   margin-top: 40px;
@@ -635,6 +635,7 @@ main.content {
 .social-panel button.close-btn {
   border: 0;
   color: #97A5CE;
+  background: transparent;
   cursor: pointer;
   font-size: 20px;
   position: absolute;
@@ -754,6 +755,27 @@ main.content {
   }
   .floating-btn {
     right: 10px;
+  }
+}
+
+@media screen and (max-width: 451px) {
+  #footer {
+    height: auto;
+  }
+  #footer .container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 805px) {
+  #footer .container .card {
+    width: 80%;
+  }
+  #footer .container .newsLetterWrapper {
+    width: 60%;
+  }
+  #footer .container .newsLetterWrapper #submit {
+    padding: 0 40px;
   }
 }
 /*# sourceMappingURL=projects.css.map */

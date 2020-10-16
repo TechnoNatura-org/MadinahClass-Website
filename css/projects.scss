@@ -159,7 +159,7 @@ main.content {
         flex-wrap: wrap;
         .card {
             @include flex(flex, column, flex-start, center);
-            z-index: 9999;
+            z-index: 999;
             width: 320px;
             height: 435px;
             margin-top: 40px;
@@ -270,6 +270,7 @@ main.content {
         }
     }
 }
+
 
 #footer {
     position: relative;
@@ -400,6 +401,7 @@ main.content {
     button.close-btn {
         border: 0;
         color: #97A5CE;
+        background: transparent;
         cursor: pointer;
         font-size: 20px;
         position: absolute;
@@ -503,3 +505,29 @@ main.content {
 }
 
 // ** DELETE THIS IF WANT TO UPLOAD TO CPANEL **//
+
+
+@media screen and (max-width: 451px) {
+    #footer {
+        height: auto;
+        .container {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 805px) {
+    #footer {
+        .container {
+            .card {
+                width: 80%;
+            }
+            .newsLetterWrapper {
+                width: 60%;
+                #submit {
+                    padding: 0 40px;
+                }
+            }
+        }
+    }
+}
