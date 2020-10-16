@@ -318,7 +318,7 @@ section {
                     } 
                     .image {
                         width: 100%;
-                        height: 225px;
+                        height: 250px;
                         img {
                             width: 100%;
                             height: 90%;
@@ -328,7 +328,7 @@ section {
                         width: 100%;
                         height: 100%;
                         box-sizing: border-box;
-                        padding: 25px 25px 20px 25px;
+                        padding: 10px 25px 20px 25px;
                         .titleCard {
                             color: #484848;
                             font-size: 25px;
@@ -653,7 +653,7 @@ section {
                         border-radius: 10px;
                         .image {
                             width: 100%;
-                            height: 225px;
+                            height: 250px;
                         }
                     }
                 }
@@ -665,6 +665,9 @@ section {
         .container {
             display: none;
         }
+    }
+    .social-panel-container, .floating-btn { 
+        display: none;
     }
 
     nav {
@@ -901,7 +904,7 @@ section {
                         border-radius: 10px;
                         .image {
                             width: 100%;
-                            height: 225px;
+                            height: 250px;
                         }
                     }
                 }
@@ -1105,7 +1108,7 @@ section {
                         border-radius: 10px;
                         .image {
                             width: 100%;
-                            height: 225px;
+                            height: 250px;
                         }
                     }
                 }
@@ -1120,3 +1123,139 @@ section {
     }
 }
 
+
+
+
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 99999;
+
+    &.visible {
+        transform: translateX(-10px);
+    }
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #0084ff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+    max-width: calc(100% - 10px);
+    button.close-btn {
+        border: 0;
+        color: #97A5CE;
+        cursor: pointer;
+        font-size: 20px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        &:focus {
+            outline: none;
+        }
+    }
+    p {
+        background-color: #0084ff;
+        border-radius: 0 0 10px 10px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 2px 17px 6px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: 0;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 235px;
+        i {
+            margin: 0 5px;
+        }
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+    }
+    h4 {
+        margin: 20px 0;
+        color: #97A5CE;	
+        font-family: 'Muli';	
+        font-size: 14px;	
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin: 0 10px;
+            a {
+                border: 1px solid #DCE1F2;
+                border-radius: 50%;
+                color: #0084ff;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                width: 50px;
+                text-decoration: none;
+                transition: .3s;
+                &:hover {
+                    border-color: #0084ff;
+                    box-shadow: 0 9px 12px -9px #0084ff;
+                }
+            }
+        }
+    }
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #0084ff;
+	border: 1px solid #0084ff;
+	box-shadow: 0 16px 22px -17px #0084ff;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+    z-index: 999;
+    &:hover {
+        background-color: #ffffff;
+        color: #024EFF;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}

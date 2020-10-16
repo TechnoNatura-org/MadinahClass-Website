@@ -575,7 +575,7 @@ section {
 
 #projects .container .cardsWrapper .cards_wrapper .card .image {
   width: 100%;
-  height: 225px;
+  height: 250px;
 }
 
 #projects .container .cardsWrapper .cards_wrapper .card .image img {
@@ -588,7 +588,7 @@ section {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 25px 25px 20px 25px;
+  padding: 10px 25px 20px 25px;
 }
 
 #projects .container .cardsWrapper .cards_wrapper .card .card_content .titleCard {
@@ -1077,12 +1077,15 @@ section {
   }
   #projects .container .cardsWrapper .cards_wrapper .card .image {
     width: 100%;
-    height: 225px;
+    height: 250px;
   }
   #footer {
     height: auto;
   }
   #footer .container {
+    display: none;
+  }
+  .social-panel-container, .floating-btn {
     display: none;
   }
   nav {
@@ -1452,7 +1455,7 @@ section {
   }
   #projects .container .cardsWrapper .cards_wrapper .card .image {
     width: 100%;
-    height: 225px;
+    height: 250px;
   }
   #footer .container .card {
     width: 80%;
@@ -1755,10 +1758,180 @@ section {
   }
   #projects .container .cardsWrapper .cards_wrapper .card .image {
     width: 100%;
-    height: 225px;
+    height: 250px;
   }
   nav .nav-links {
     width: 40%;
+  }
+}
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  z-index: 99999;
+}
+
+.social-panel-container.visible {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.social-panel {
+  background-color: #fff;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
+          box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
+  border: 5px solid #0084ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Muli';
+  position: relative;
+  height: 169px;
+  width: 370px;
+  max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+  border: 0;
+  color: #97A5CE;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+  outline: none;
+}
+
+.social-panel p {
+  background-color: #0084ff;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 2px 17px 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  width: 235px;
+}
+
+.social-panel p i {
+  margin: 0 5px;
+}
+
+.social-panel p a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.social-panel h4 {
+  margin: 20px 0;
+  color: #97A5CE;
+  font-family: 'Muli';
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.social-panel ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-panel ul li {
+  margin: 0 10px;
+}
+
+.social-panel ul li a {
+  border: 1px solid #DCE1F2;
+  border-radius: 50%;
+  color: #0084ff;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.social-panel ul li a:hover {
+  border-color: #0084ff;
+  -webkit-box-shadow: 0 9px 12px -9px #0084ff;
+          box-shadow: 0 9px 12px -9px #0084ff;
+}
+
+.floating-btn {
+  border-radius: 26.5px;
+  background-color: #0084ff;
+  border: 1px solid #0084ff;
+  -webkit-box-shadow: 0 16px 22px -17px #0084ff;
+          box-shadow: 0 16px 22px -17px #0084ff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 12px 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.floating-btn:hover {
+  background-color: #ffffff;
+  color: #024EFF;
+}
+
+.floating-btn:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 480px) {
+  .social-panel-container.visible {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .floating-btn {
+    right: 10px;
   }
 }
 /*# sourceMappingURL=index.css.map */

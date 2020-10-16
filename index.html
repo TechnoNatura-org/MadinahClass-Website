@@ -89,7 +89,6 @@
             height: 0%;
         }
     }
-    }
 </style>
 
 <body>
@@ -224,8 +223,50 @@
             </div>
             <footer>&copy; 2020 by Madinah Class</footer>
         </section>
-    </main>
+        <!-- SOCIAL PANEL HTML -->
+        <div class="social-panel-container">
+            <div class="social-panel">
+                <p>Created with <i class="fa fa-heart"></i> by
+                    <a target="_blank" href="#">Us</a></p>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+                <h4>Share our website</h4>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/share?url=https://madinah.my.id/&amp;text=This%20Website%20Is%20So%20Cool!&amp;hashtags=madinahClass"
+                            target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.facebook.com/sharer.php?u=https://madinah.my.id" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://reddit.com/submit?url=https://madinah.my.id&amp;title=Madinah Class Website"
+                            target="_blank">
+                            <i class="fab fa-reddit"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:?Subject=Hello Friend!&amp;Body=This%20website%20is%20cool%20friend!%20 https://madinah.my.id/"
+                            target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="floating-btn">
+            Share
+        </button>
 
+    </main>
     <script>
         const cardsWrapper = document.querySelector('.cards_wrapper');
         const burger = document.querySelector('.burger');
@@ -298,8 +339,6 @@
             console.log(this.parentElement)
             this.parentElement.classList.toggle('active')
         });
-
-
         // loading bar 
         let status;
         window.addEventListener('online', (event) => {
@@ -317,6 +356,21 @@
         window.addEventListener('offline', (event) => {
             lW.querySelector('.status').textContent = 'Waiting for network..'
             lW.classList.remove('loaded')
+        });
+    </script>
+    <script>
+
+        // SOCIAL PANEL JS
+        const floating_btn = document.querySelector('.floating-btn');
+        const close_btn = document.querySelector('.close-btn');
+        const social_panel_container = document.querySelector('.social-panel-container');
+
+        floating_btn.addEventListener('click', () => {
+            social_panel_container.classList.toggle('visible')
+        });
+
+        close_btn.addEventListener('click', () => {
+            social_panel_container.classList.remove('visible')
         });
     </script>
 </body>
