@@ -1,26 +1,40 @@
-[
-    {
+{
+    "latestProject": {
         "name": "Lorem Ipsum Dolor",
         "desc": "A simple design with an abstract with on it",
         "author": "John Doe",
-        "image": "tesT.jpg"
+        "image": ""
     },
-    {
-        "name": "Cool Website!",
-        "desc": "NICE EEEsimple website!",
-        "author": "Doe John",
-        "image": "https://res.cloudinary.com/madinah/image/upload/v1601630793/project%20images/tesT_j8jom2.jpg"
-    },
-    {
-        "name": "Website Cool!",
-        "desc": "NICE sIMple website!",
-        "author": "Doe John!",
-        "image": "https://res.cloudinary.com/madinah/image/upload/v1601630793/project%20images/tesT_j8jom2.jpg"
-    },
-    {
-        "name": "ssste Cool!",
-        "desc": "NICEsse website!",
-        "author": "Doesn!",
-        "image": "https://res.cloudinary.com/madinah/image/upload/v1601630794/project%20images/testtt_dhp6lr.jpg"
-    }
-]
+    "projects": [
+        {
+            "name": "Lorem Ipsum Dolor",
+            "desc": "A simple design with an abstract with on it",
+            "author": "John Doe",
+            "image": ""
+        },
+        {
+            "name": "Cool Website!",
+            "desc": "NICE EEEsimple website!",
+            "author": "Doe John",
+            "image": "https://res.cloudinary.com/madinah/image/upload/v1601630793/project%20images/tesT_j8jom2.jpg"
+        },
+        {
+            "name": "Website Cool!",
+            "desc": "NICE sIMple website!",
+            "author": "Doe John!",
+            "image": "https://res.cloudinary.com/madinah/image/upload/v1601630793/project%20images/tesT_j8jom2.jpg"
+        },
+        {
+            "name": "ssste Cool!",
+            "desc": "Nhelo world!",
+            "author": "Doesn!",
+            "image": "https://res.cloudinary.com/madinah/image/upload/v1601630794/project%20images/testtt_dhp6lr.jpg"
+        },
+        {
+            "name": "ssste Cool!",
+            "desc": "NICE EEEsimple",
+            "author": "Doesn!",
+            "image": "https://res.cloudinary.com/madinah/image/upload/v1601630794/project%20images/testtt_dhp6lr.jpg"
+        }
+    ]
+}

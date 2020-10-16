@@ -4,28 +4,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Madinah Class | Projects</title>
+    <script src="https://kit.fontawesome.com/fbfd4b3bb0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/projects.css">
 </head>
+<!-- DELETE THIS IF WANT TO UPLOAD TO CPANEL -->
+<style>
+    .loader-wrapper {
+        z-index: 999999;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #242f3f;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        color: white;
+    }
+
+    .loader-wrapper.loaded {
+        opacity: 0;
+        z-index: -3;
+    }
+
+    .loader {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border: 4px solid #Fff;
+        animation: loader 2s infinite ease;
+        margin-bottom: 20px;
+    }
+
+    .loader-inner {
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        animation: loader-inner 2s infinite ease-in;
+    }
+
+    @keyframes loader {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(180deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        75% {
+            transform: rotate(360deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes loader-inner {
+        0% {
+            height: 0%;
+        }
+
+        25% {
+            height: 0%;
+        }
+
+        50% {
+            height: 100%;
+        }
+
+        75% {
+            height: 100%;
+        }
+
+        100% {
+            height: 0%;
+        }
+    }
+</style>
+<!-- DELETE THIS IF WANT TO UPLOAD TO CPANEL -->
 
 <body>
-    <code>
-        if int < 5 then
-            print("Hello World!")
-        
-        
-        
-        
-        &nbsp;
-        
-        
-        
-        
-        
-        
-        
-        
-            end
-    </code>
+    <!-- DELETE THIS IF WANT TO UPLOAD TO CPANEL -->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        <p class="status">Loading<span>.</span><span>.</span><span>.</span></p>
+    </div>
+    <!-- DELETE THIS IF WANT TO UPLOAD TO CPANEL -->
+
+
+    <main id="main">
+        <div class="bg"></div>
+        <div class="content">
+            <header class="navbar">
+                <nav>
+                    <h2 class="logo">MADINAH CLASS</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <header class="projectOfTheWeekContainer">
+                <p class="desc">Project of the week</p>
+                <h1 class="title">Lorem Ipsum!</h1>
+                <p class="author">Made by <span class="name"><span>Aldhan</span> </span></p>
+            </header>
+            <main class="content">
+                <div class="searchContainer">
+                    <h3>Our Projects</h3>
+                    <input type="text" name="" id="" class="searchBox" placeholder="What are you looking for?">
+                    <div class="searchBtn"><i class="fa fa-search"></i></div>
+                </div>
+                <div class="projects">
+                    <div class="cardWrapper">
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://res.cloudinary.com/madinah/image/upload/v1601630793/project%20images/tesT_j8jom2.jpg"
+                                    alt="">
+                            </div>
+                            <div class="card_content">
+                                <h3 class="titleCard">Website Cool!</h3>
+                                <p class="desc">NICE sIMple web...</p>
+                                <div class="author">
+                                    <i class="fas fa-user-circle" aria-hidden="true"></i>
+                                    <span>Doe John!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="showMoreWrapper">
+                    <button class="showMore">Show More</button>
+                </div>
+            </main>
+        </div>
+        <div class="banner">
+            <h2>Want your project show above?</h2>
+            <a href="" class="uploadProject">
+                <p>Yes, Please!</p>
+            </a>
+            <div class="bg"></div>
+            <img src="https://res.cloudinary.com/madinah/image/upload/v1601630654/home%20page%20images/wallpaper_jghoi1.jpg"
+                alt="">
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="card">
+                    <div class="textsWrapper">
+                        <p class="desc">Want to receive our email news letter?</p>
+                        <h2 class="title">Get In Touch!</h2>
+                    </div>
+                </div>
+                <form class="newsLetterWrapper">
+                    <input type="email" name="email" id="email" required placeholder="email@example.com">
+                    <button type="submit" name="subscribe" id="submit">Send</button>
+                </form>
+            </div>
+            <footer>&copy; 2020 by Madinah Class</footer>
+        </div>
+
+        <!-- DELETE THIS IF WANT TO UPLOAD TO CPANEL -->
+        <!-- SOCIAL PANEL HTML -->
+        <div class="social-panel-container">
+            <div class="social-panel">
+                <p>Created with <i class="fa fa-heart"></i> by
+                    <a target="_blank" href="#">Us</a></p>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+                <h4>Share our website</h4>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/share?url=https://madinah.my.id/&amp;text=This%20Website%20Is%20So%20Cool!&amp;hashtags=madinahClass"
+                            target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.facebook.com/sharer.php?u=https://madinah.my.id" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://reddit.com/submit?url=https://madinah.my.id&amp;title=Madinah Class Website"
+                            target="_blank">
+                            <i class="fab fa-reddit"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:?Subject=Hello Friend!&amp;Body=This%20website%20is%20cool%20friend!%20 https://madinah.my.id/"
+                            target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="floating-btn">
+            Share
+        </button>
+        <!-- DELETE THIS IF WANT TO UPLOAD TO CPANEL -->
+    </main>
+
+    <script>
+        const showMoreBtn = document.querySelector('.showMore');
+        const projects = document.querySelector('.projects');
+
+        showMoreBtn.addEventListener('click', function () {
+            if (projects.style.height != 'auto') {
+                projects.style.height = 'auto';
+                showMoreBtn.textContent = 'Show Less'
+            } else {
+                projects.style.height = '950px';
+                showMoreBtn.textContent = 'Show More'
+            }
+            //     console.log('world')
+            // }
+            console.log(projects.style.height == 'auto')
+        })
+    </script>
+    <script>
+        const projectOfTheWeekContainer = document.querySelector('.projectOfTheWeekContainer')
+        const cardsWrapper = document.querySelector('.cardWrapper');
+
+        // ====== Function to generate projects ==============
+        // ===================================================
+
+        // main function to get projects.json
+        async function generateProject() {
+            try {
+                let cards = '';
+                // get JSON format and return it as object
+                let cardLists = await getProjects();
+                // console.log(cardLists)
+                // console.log(cardLists["projects"].slice(cardLists["projects"].length - 2))
+
+                // generate card to cardsWrapper
+                cards = generateCard(cardLists);
+                cardLists = cardLists["projects"]
+                // console.log(generateCard(cardLists))
+
+                // generate card to cardsWrapper
+                cardsWrapper.innerHTML = cards;
+            } catch (err) {
+                // if there is an error..
+                cardsWrapper.innerHTML = err
+                cardsWrapper.classList.add('error')
+            }
+        }
+
+        generateProject()
+
+        // fetch or request to the projects.json file
+        function getProjects() {
+            return fetch('js/projects.json')
+                .then(response => {
+                    // console.log(response)
+                    if (response.status == 404) {
+                        throw new Error(response.statusText);
+                    }
+                    // change json format to become object
+                    return response.json();
+                })
+                .then(response => response)
+        }
+
+        function truncateAString(str, int) {
+            str = str.trim().split(" ").filter(e => e != '');
+            if (str.length == int || str.length < int)
+                return str.slice(0, int).join(' ')
+            else
+                return str.slice(0, int).join(' ') + '...';
+        }
+        function generateCard({ projects: arr }) {
+            console.log(arr)
+            let Arr = '';
+            arr.forEach(element => {
+                let { name: titleProject, desc: descProject, author, image } = element;
+                // 2 is number of word
+                descProject = truncateAString(descProject, 5);
+                Arr +=
+                    `
+        <div class="card">
+            <div class="image">
+                <img src="${image !== '' ? image : 'https://res.cloudinary.com/madinah/image/upload/v1602837465/imagenotavailable_g6lxeq.jpg'}" alt="">
+            </div>
+            <div class="card_content">
+                <h3 class="titleCard">${titleProject}</h3>
+                <p class="desc">${descProject}</p>
+                <div class="author">
+                    <i class="fas fa-user-circle"></i>
+                    <span>${author}</span>
+                </div>
+            </div>
+        </div>
+        `;
+            });
+            return Arr;
+        }
+        // console.log(burger)
+
+        // ========= Function to generate projects ===========
+        // ===================================================
+
+        async function getProjectOfTheWeek() {
+            try {
+                let project = await getProjects()
+                console.log(project)
+                let projectOfTheWeekContainerContent = getProjectOfTheWeekContainerContent(project)
+                projectOfTheWeekContainer.innerHTML = projectOfTheWeekContainerContent;
+            } catch (e) {
+                projectOfTheWeekContainer.innerHTML = e
+            }
+        }
+        getProjectOfTheWeek()
+
+        function getProjectOfTheWeekContainerContent({ latestProject: { name, author: authorName } }) {
+            // console.log(latestProject)
+            return `
+            <p class="desc">Project of the week</p>
+                <h1 class="title">${name}</h1>
+                <p class="author">Made by <span class="name"><span>${authorName}</span> </span></p>
+            `
+        }
+    </script>
+
+    <!-- DELETE THIS IF WANT TO UPLOAD TO CPANEL -->
+    <script>
+        const lW = document.querySelector('.loader-wrapper');
+        // loading bar 
+        let status;
+        window.addEventListener('online', (event) => {
+            lW.querySelector('.status').textContent = 'Connected!';
+            setTimeout(() => {
+                lW.classList.add('loaded');
+            }, 2000);
+        });
+        window.addEventListener('load', (event) => {
+            setTimeout(() => {
+                lW.classList.add('loaded')
+            }, 1000);
+        });
+        // if we disconnect to network then this statment run
+        window.addEventListener('offline', (event) => {
+            lW.querySelector('.status').textContent = 'Waiting for network..'
+            lW.classList.remove('loaded')
+        });
+
+        // SOCIAL PANEL JS
+        const floating_btn = document.querySelector('.floating-btn');
+        const close_btn = document.querySelector('.close-btn');
+        const social_panel_container = document.querySelector('.social-panel-container');
+
+        floating_btn.addEventListener('click', () => {
+            social_panel_container.classList.toggle('visible')
+        });
+
+        close_btn.addEventListener('click', () => {
+            social_panel_container.classList.remove('visible')
+        });
+    </script>
+    <!-- DELETE THIS IF WANT TO UPLOAD TO CPANEL -->
 
 </body>
 

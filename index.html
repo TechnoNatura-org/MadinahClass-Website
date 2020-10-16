@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Madinah Class | Home</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/fbfd4b3bb0.js" crossorigin="anonymous"></script>
 </head>
@@ -102,10 +102,10 @@
                 <h4>madinah class</h4>
             </div>
             <ul class="nav-links">
-                <li><a href="">Home</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -277,10 +277,11 @@
             try {
                 let cards = '';
                 let cardLists = await getProjects();
-                // console.log(cards)
-                cardLists = cardLists.slice(cardLists.length - 3, cardLists.length);
+                // console.log(cardLists)
+                // console.log(cardLists["projects"].slice(cardLists["projects"].length - 2))
+                cardLists = cardLists["projects"].slice(cardLists["projects"].length - 3);
                 cards = generateCard(cardLists);
-                console.log(generateCard(cardLists))
+                // console.log(generateCard(cardLists))
 
                 cardsWrapper.innerHTML = cards;
             } catch (err) {
@@ -333,8 +334,9 @@
             });
             return Arr;
         }
-        console.log(burger)
+        // console.log(burger)
 
+        // burger menu
         burger.addEventListener('click', function () {
             console.log(this.parentElement)
             this.parentElement.classList.toggle('active')
