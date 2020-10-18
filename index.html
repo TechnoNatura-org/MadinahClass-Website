@@ -268,7 +268,114 @@
         </button>
 
     </main>
-    <script src="js/index.js"></script>
+    <script>
+        const cardsWrapper = document.querySelector('.cards_wrapper');
+        const burger = document.querySelector('.burger');
+        const lW = document.querySelector('.loader-wrapper');
+        // console.log(cardsWrapper)
+
+        async function generateLatestProject() {
+            try {
+                let cards = '';
+                let cardLists = await getProjects();
+                // console.log(cardLists)
+                // console.log(cardLists["projects"].slice(cardLists["projects"].length - 2))
+                cardLists = cardLists["projects"].slice(cardLists["projects"].length - 3);
+                cards = generateCard(cardLists);
+                // console.log(generateCard(cardLists))
+
+                cardsWrapper.innerHTML = cards;
+            } catch (err) {
+                cardsWrapper.querySelector('p').innerHTML = err
+                cardsWrapper.classList.add('error')
+            }
+        }
+
+        generateLatestProject()
+
+        function getProjects() {
+            return fetch('js/projects.json')
+                .then(response => {
+                    console.log(response)
+                    if (response.status == 404) {
+                        throw new Error(response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(response => response)
+        }
+
+        function truncateAString(str, int) {
+            if (str.length == int)
+                return str
+            else
+                return str.substring(0, int) + '...';
+        }
+        function generateCard(arr) {
+            let Arr = '';
+            arr.forEach(element => {
+                let { name: titleProject, desc: descProject, author, image } = element;
+                descProject = truncateAString(descProject, 15);
+                Arr +=
+                    `
+        <div class="card">
+            <div class="image">
+                <img src="${image}" alt="">
+            </div>
+            <div class="card_content">
+                <h3 class="titleCard">${titleProject}</h3>
+                <p class="desc">${descProject}</p>
+                <div class="author">
+                    <i class="fas fa-user-circle"></i>
+                    <span>${author}</span>
+                </div>
+            </div>
+        </div>
+        `;
+            });
+            return Arr;
+        }
+        // console.log(burger)
+
+        // burger menu
+        burger.addEventListener('click', function () {
+            console.log(this.parentElement)
+            this.parentElement.classList.toggle('active')
+        });
+        // loading bar 
+        let status;
+        window.addEventListener('online', (event) => {
+            lW.querySelector('.status').textContent = 'Connected!';
+            setTimeout(() => {
+                lW.classList.add('loaded');
+            }, 2000);
+        });
+        window.addEventListener('load', (event) => {
+            setTimeout(() => {
+                lW.classList.add('loaded')
+            }, 1000);
+        });
+        // if we disconnect to network then this statment run
+        window.addEventListener('offline', (event) => {
+            lW.querySelector('.status').textContent = 'Waiting for network..'
+            lW.classList.remove('loaded')
+        });
+    </script>
+    <script>
+
+        // SOCIAL PANEL JS
+        const floating_btn = document.querySelector('.floating-btn');
+        const close_btn = document.querySelector('.close-btn');
+        const social_panel_container = document.querySelector('.social-panel-container');
+
+        floating_btn.addEventListener('click', () => {
+            social_panel_container.classList.toggle('visible')
+        });
+
+        close_btn.addEventListener('click', () => {
+            social_panel_container.classList.remove('visible')
+        });
+    </script>
 </body>
 
 </html>
