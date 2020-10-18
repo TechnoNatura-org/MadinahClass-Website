@@ -108,7 +108,6 @@ header.projectOfTheWeekContainer {
         left: 20px;
         top: 10px;
         font-size: 15px;
-
     }
 }
 main.content {
@@ -161,7 +160,7 @@ main.content {
             @include flex(flex, column, flex-start, center);
             z-index: 999;
             width: 320px;
-            height: 435px;
+            height: auto;
             margin-top: 40px;
 
             background-color: rgb(255, 255, 255);
@@ -175,14 +174,14 @@ main.content {
                 height: 250px;
                 img {
                     width: 100%;
-                    height: 90%;
+                    height: 100%;
                 }
             }
             .card_content {
                 width: 100%;
                 height: 100%;
                 box-sizing: border-box;
-                padding: 10px 25px 20px 25px;
+                padding: 10px 25px 40px 25px;
                 .titleCard {
                     color: #484848;
                     font-size: 25px;
@@ -516,7 +515,7 @@ main.content {
     }
 }
 
-@media screen and (min-width: 451px) and (max-width: 805px) {
+@media screen and (max-width: 451px) {
     #footer {
         .container {
             .card {
@@ -528,6 +527,147 @@ main.content {
                     padding: 0 40px;
                 }
             }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 855px) {
+
+div.content {
+    width: 100%;
+    height: auto;
+    padding: 80px 30px;
+    z-index: 9999;
+    padding-top: 50px;
+}
+header.navbar {
+    height: 100px;
+    nav {
+        @include flex(flex, column, space-between, center);
+        h2 {
+            font-size: 2em;
+        }
+        ul {
+            margin-top: 20px;
+            width: 90%;
+        }
+    }
+}
+
+header.projectOfTheWeekContainer {
+    margin-top: 50px;
+    font-size: 15px;
+}
+main.content {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    // text-align: ;
+}
+.searchContainer {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    @include flex(flex, row, space-between, center);
+    font-size: 40px;
+    input.searchBox {
+        width: 100%;
+        height: 100%;
+        border: 1px solid $black;
+        color: #69696952;
+        border-radius: 50px;
+        outline: none;
+        background: transparent;
+        padding: 10px 20px;
+        font-size: 18px;
+        &:focus {
+            color: $black;
+        }
+    }
+    h3 {
+        display: none;
+    }
+    .searchBtn {
+        position: absolute;
+        right: 5%;
+        font-size: 20px;
+    }
+}
+.banner {
+    img {
+        top: 0;
+    }
+    h2 {
+        font-size: 25px;
+    }
+}
+
+
+#footer {
+    .container {
+        .card {
+            width: 90%;
+            height: 220px;
+            border-radius: 20px;
+            .textsWrapper {
+                text-align: center;
+                .desc {
+                    font-size: 13px;
+                }
+                .title {
+                    font-size: 2.3em;
+                }
+            }
+        }
+        .newsLetterWrapper {
+            height: 90px;
+            width: 80%;
+            margin-top: -40px;
+            position: relative;
+        }
+    }
+}
+}
+
+
+
+
+
+@media screen and (min-width: 855px) and (max-width: 1025px) {
+    div.content {
+        padding: 100px 50px;
+    }
+    header.navbar {
+        nav {
+            h2 {
+                font-size: 2em;
+            }
+            ul {
+                $height: 50px;
+                width: 50%;
+            }
+        }
+    }
+    .banner {
+        width: 100%;
+        height: 280px;
+    @include flex(flex, column, center, center);
+        overflow-y: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            // height
+            position: absolute;
+            top: -35%;
+            z-index: 1;
+        }
+        h2 {
+            z-index: 10;
+            position: relative;
+            color: white;
+            font-size:3rem;
         }
     }
 }

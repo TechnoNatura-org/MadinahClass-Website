@@ -251,7 +251,7 @@ main.content {
           align-items: center;
   z-index: 999;
   width: 320px;
-  height: 435px;
+  height: auto;
   margin-top: 40px;
   background-color: white;
   -webkit-transition: .3s;
@@ -272,7 +272,7 @@ main.content {
 
 .projects .cardWrapper .card .image img {
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 
 .projects .cardWrapper .card .card_content {
@@ -280,7 +280,7 @@ main.content {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 25px 20px 25px;
+  padding: 10px 25px 40px 25px;
 }
 
 .projects .cardWrapper .card .card_content .titleCard {
@@ -767,7 +767,7 @@ main.content {
   }
 }
 
-@media screen and (min-width: 451px) and (max-width: 805px) {
+@media screen and (max-width: 451px) {
   #footer .container .card {
     width: 80%;
   }
@@ -776,6 +776,160 @@ main.content {
   }
   #footer .container .newsLetterWrapper #submit {
     padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  div.content {
+    width: 100%;
+    height: auto;
+    padding: 80px 30px;
+    z-index: 9999;
+    padding-top: 50px;
+  }
+  header.navbar {
+    height: 100px;
+  }
+  header.navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.navbar nav h2 {
+    font-size: 2em;
+  }
+  header.navbar nav ul {
+    margin-top: 20px;
+    width: 90%;
+  }
+  header.projectOfTheWeekContainer {
+    margin-top: 50px;
+    font-size: 15px;
+  }
+  main.content {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+  }
+  .searchContainer {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 40px;
+  }
+  .searchContainer input.searchBox {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #484848;
+    color: #69696952;
+    border-radius: 50px;
+    outline: none;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .searchContainer input.searchBox:focus {
+    color: #484848;
+  }
+  .searchContainer h3 {
+    display: none;
+  }
+  .searchContainer .searchBtn {
+    position: absolute;
+    right: 5%;
+    font-size: 20px;
+  }
+  .banner img {
+    top: 0;
+  }
+  .banner h2 {
+    font-size: 25px;
+  }
+  #footer .container .card {
+    width: 90%;
+    height: 220px;
+    border-radius: 20px;
+  }
+  #footer .container .card .textsWrapper {
+    text-align: center;
+  }
+  #footer .container .card .textsWrapper .desc {
+    font-size: 13px;
+  }
+  #footer .container .card .textsWrapper .title {
+    font-size: 2.3em;
+  }
+  #footer .container .newsLetterWrapper {
+    height: 90px;
+    width: 80%;
+    margin-top: -40px;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 855px) and (max-width: 1025px) {
+  div.content {
+    padding: 100px 50px;
+  }
+  header.navbar nav h2 {
+    font-size: 2em;
+  }
+  header.navbar nav ul {
+    width: 50%;
+  }
+  .banner {
+    width: 100%;
+    height: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: hidden;
+    position: relative;
+  }
+  .banner img {
+    width: 100%;
+    position: absolute;
+    top: -35%;
+    z-index: 1;
+  }
+  .banner h2 {
+    z-index: 10;
+    position: relative;
+    color: white;
+    font-size: 3rem;
   }
 }
 /*# sourceMappingURL=projects.css.map */
