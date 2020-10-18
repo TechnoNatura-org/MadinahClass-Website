@@ -530,6 +530,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: none;
+          box-sizing: none;
+  padding: 0 30px;
   width: 100%;
   height: 100%;
 }
@@ -560,7 +563,7 @@ section {
           align-items: center;
   z-index: 9999;
   width: 30%;
-  height: 435px;
+  height: auto;
   background-color: white;
   -webkit-transition: .3s;
   transition: .3s;
@@ -580,7 +583,7 @@ section {
 
 #projects .container .cardsWrapper .cards_wrapper .card .image img {
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 
 #projects .container .cardsWrapper .cards_wrapper .card .card_content {
@@ -588,7 +591,7 @@ section {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 25px 20px 25px;
+  padding: 10px 25px 30px 25px;
 }
 
 #projects .container .cardsWrapper .cards_wrapper .card .card_content .titleCard {

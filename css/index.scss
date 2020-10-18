@@ -295,6 +295,8 @@ section {
             height: 435px;
             .cards_wrapper {
                 @include flex(flex, row, space-between, center);
+                box-sizing: none;
+                padding: 0 30px;
                 width: 100%;
                 height: 100%;
                 &.error {
@@ -309,7 +311,7 @@ section {
                     @include flex(flex, column, flex-start, center);
                     z-index: 9999;
                     width: 30%;
-                    height: 435px;
+                    height: auto;
                     background-color: rgb(255, 255, 255);
                     transition: .3s;
                     &:hover {
@@ -321,14 +323,14 @@ section {
                         height: 250px;
                         img {
                             width: 100%;
-                            height: 90%;
+                            height: 100%;
                         }
                     }
                     .card_content {
                         width: 100%;
                         height: 100%;
                         box-sizing: border-box;
-                        padding: 10px 25px 20px 25px;
+                        padding: 10px 25px 30px 25px;
                         .titleCard {
                             color: #484848;
                             font-size: 25px;
