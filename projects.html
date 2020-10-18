@@ -13,6 +13,7 @@
 <style>
     .loader-wrapper {
         z-index: 999999;
+        visibility: visible;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -29,7 +30,8 @@
 
     .loader-wrapper.loaded {
         opacity: 0;
-        z-index: -3;
+        z-index: -99999;
+        visibility: hidden;
     }
 
     .loader {
