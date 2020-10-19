@@ -1,0 +1,7 @@
+# This website is under our license
+
+THIS WEBSITE IS NOT FOR COMMERCIAL USE, YOU DO NOT HAVE PERMISSION TO MODIFY, CHANGE, AND USE THIS WEBSITE. AND YOU DO NOT HAVE PERMISSION TO SELL THIS WEBSITE.
+  
+last modified: 19 October 2020, changed by Aldhanekaa 
+© 2020 by Madinah Class
+
