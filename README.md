@@ -1,2 +1,2 @@
 # MadinahClass-Website
-only our friend have access to edit, modify, and use this website
+checkout our [wiki page](https://github.com/madinah-class/MadinahClass-Website/wiki) for more information about this repo
